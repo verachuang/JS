@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grade</title>
+    </head>
+    
+    <body>
+       
+        <script>
+            // Create function methods instead of repeated it in every if and else if method.
+            // Put all functions to another .js file cause the function just like a tool, and it's not essential for the whole page. 
+            function AlertLetterGrade(grade, letterGrade)
+            {
+                alert("Number grade = " + grade + "\n" + "Letter grade = " + letterGrade);
+            }
+            
+            function AlertGoodbye()
+            {
+                alert("Goodbye");
+            }
+            
+            function AlertErrorMsg()
+            {
+                alert("It is an invalid grade. \nPlease refresh the page to enter the number grade from 0 through 100.");
+            }
+        
+            
+            // var can remain the same
+            var grade = parseInt(prompt("Enter number grade from 0 through 100 \nOr enter 999 to end entries"));
+            
+            // now, all if method looks cleaner cause we don't need to repeat alert msg in each line.
+            if (grade == NaN)
+            {
+                AlertErrorMsg();
+            }
+                
+            if (grade >= 88 && grade <= 100)  
+            {
+                AlertLetterGrade(grade, "A");
+            } 
+            else if (grade >= 80 && grade <= 87) 
+            {
+                AlertLetterGrade(grade, "B");
+            } 
+            else if (grade >= 68 && grade <= 79) 
+            {
+                AlertLetterGrade(grade, "C");
+            } 
+            else if (grade >= 60 && grade <= 67) 
+            {
+                AlertLetterGrade(grade, "D");
+            } 
+            else if (grade < 60) 
+            {
+                AlertLetterGrade(grade, "F");
+            } 
+            else if (grade == 999) 
+            {
+                AlertGoodbye();
+            }
+        </script>
+    </body>
+</html>
